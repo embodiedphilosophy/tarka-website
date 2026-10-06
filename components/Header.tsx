@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { mainNav, site } from "@/lib/site";
+import Logo from "./Logo";
 
 /** Full masthead on the homepage; compact bar everywhere else. Print page uses its own dark header. */
 export default function Header() {
@@ -39,7 +40,7 @@ export default function Header() {
         </div>
         <div className="container site-header__main">
           <Link href="/" className="wordmark wordmark--xl" aria-label="Tarka home">
-            TARKA
+            <Logo height={58} />
           </Link>
           {nav}
         </div>
@@ -51,7 +52,7 @@ export default function Header() {
     <header className="site-header site-header--compact">
       <div className="container site-header__main">
         <Link href="/" className="wordmark wordmark--m" aria-label="Tarka home">
-          TARKA
+          <Logo height={32} />
         </Link>
         {nav}
       </div>

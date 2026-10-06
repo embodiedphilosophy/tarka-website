@@ -90,7 +90,7 @@ export function Cover({
   const label = `Cover of ${number != null ? `No. ${number}, ` : ""}${title}`;
   if (image) {
     // eslint-disable-next-line @next/next/no-img-element
-    return <img src={image} alt={label} className={className} style={{ aspectRatio: "3 / 4", objectFit: "cover" }} />;
+    return <img src={image} alt={label} className={className} style={{ aspectRatio: "3 / 4", objectFit: "cover", width: "100%", display: "block" }} />;
   }
   const p = palettes[art];
   const long = title.length > 18;
@@ -121,7 +121,7 @@ export function Cover({
 export function ArticleArt({ art, title, image, wide = false }: { art: ArtKey; title: string; image?: string; wide?: boolean }) {
   if (image) {
     // eslint-disable-next-line @next/next/no-img-element
-    return <img src={image} alt="" />;
+    return <img src={image} alt="" style={{ width: "100%", aspectRatio: wide ? "640 / 420" : "3 / 2", objectFit: "cover", display: "block" }} />;
   }
   const p = palettes[art];
   const w = wide ? 640 : 300;
@@ -140,7 +140,14 @@ export function ArticleArt({ art, title, image, wide = false }: { art: ArtKey; t
 export function EditionCover({ art, title, image }: { art: ArtKey; title: string; image?: string }) {
   if (image) {
     // eslint-disable-next-line @next/next/no-img-element
-    return <img src={image} alt={`Cover of ${title}`} className="cover" />;
+    return (
+      <img
+        src={image}
+        alt={`Cover of ${title}`}
+        className="cover"
+        style={{ aspectRatio: "2 / 3", objectFit: "contain", background: "#E9DFC9", width: "100%" }}
+      />
+    );
   }
   const p = palettes[art];
   return (

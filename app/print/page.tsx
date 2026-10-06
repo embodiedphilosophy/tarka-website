@@ -3,6 +3,7 @@ import Link from "next/link";
 import { getIssues } from "@/lib/content";
 import { mainNav } from "@/lib/site";
 import { Cover } from "@/components/Art";
+import Logo from "@/components/Logo";
 
 export const metadata: Metadata = {
   title: "Tarka in print",
@@ -34,7 +35,7 @@ export default async function PrintPage({ searchParams }: { searchParams: Promis
     <main>
       <section className="print-hero">
         <div className="container site-header__main" style={{ borderBottom: "1px solid #3a3832", alignItems: "center", paddingBlock: 14 }}>
-          <Link href="/" className="wordmark wordmark--m" aria-label="Tarka home">TARKA</Link>
+          <Link href="/" className="wordmark wordmark--m" aria-label="Tarka home"><Logo height={32} light /></Link>
           <nav aria-label="Main" className="main-nav">
             {mainNav.map((i) => <Link key={i.href} href={i.href}>{i.label}</Link>)}
             <a href="#pricing" className="btn btn--cream">Subscribe</a>

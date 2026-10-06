@@ -15,6 +15,9 @@ export default function EditionsPage() {
         <div className="stack" style={{ gap: 14 }}>
           <p className="dek">The press of Tarka Journal.</p>
           <p className="body-l"><b>{editionsSeries.name}.</b> {editionsSeries.description}</p>
+          <p className="small">
+            Editions will also open in <Link href="/vak" className="link-underline">Vāk</Link>, the Tarka Sanskrit app (spring 2027).
+          </p>
         </div>
       </section>
       <section className="grid-covers" style={{ gridTemplateColumns: "repeat(auto-fill, minmax(220px, 1fr))" }}>

@@ -1,4 +1,5 @@
 import type { Edition } from "@/lib/types";
+import { media } from "@/lib/media";
 
 /**
  * Tarka Editions. Vols. I–II of the Scholar-Practitioner Editions are drafted in Drive;
@@ -38,6 +39,7 @@ export const editions: Edition[] = [
     subtitle: "Chants & mantras, curated by Jacob Kyle",
     status: "available",
     art: "gold",
+    coverImage: media.editions.songOfSadhana,
     description: "[Book description.]",
     format: "[Format · pages]",
     price: "[PRICE]",

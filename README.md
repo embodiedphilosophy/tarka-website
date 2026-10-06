@@ -37,11 +37,13 @@ app/                  routes (one folder per page in the sitemap)
   print/              the ad landing page (+ /print/thanks)
   subscribe/ newsletter/ about/ pitch/ institute/ support/ archive/ search/
   congress/ consortium/ events/ editorial-board/   growth-strategy pages (Oct 2026)
+  vak/                Vāk, the Tarka Sanskrit app (waitlist page)
   api/checkout/       Stripe Checkout (inactive until keys are set)
 components/           Header, Footer, cards, covers/art, newsletter form, print band
 content/              ← all content lives here for now
   issues.ts authors.ts topics.ts editions.ts redirects.json
   events.ts congress.ts   Congress programme + the four city Evenings
+  institute.ts vak.ts     Institute programs/timeline; Vāk app copy (placeholders in [brackets])
   articles/*.md       one Markdown file per essay (frontmatter = metadata)
 lib/
   content.ts          the ONLY place pages read content from (swap to Sanity later)

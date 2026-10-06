@@ -1,12 +1,13 @@
 import Link from "next/link";
 import { footerNav, site } from "@/lib/site";
+import Logo from "./Logo";
 
 export default function Footer() {
   return (
     <footer className="site-footer">
       <div className="container site-footer__inner">
         <div className="site-footer__about">
-          <span className="wordmark" style={{ fontSize: 28, color: "var(--ink)" }}>TARKA</span>
+          <Logo height={26} />
           <span>{site.description}</span>
           <span className="small">© {new Date().getFullYear()} Embodied Philosophy</span>
         </div>

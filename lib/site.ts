@@ -28,6 +28,7 @@ export const footerNav = [
   { href: "/newsletter", label: "Newsletter" },
   { href: "/pitch", label: "Pitch us" },
   { href: "/institute", label: "Tarka Institute" },
+  { href: "/vak", label: "Vāk app" },
   { href: "/support", label: "Support Tarka" },
   { href: "/archive", label: "Archive" },
   { href: "/search", label: "Search" },
