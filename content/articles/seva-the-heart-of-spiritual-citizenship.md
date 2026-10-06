@@ -1,11 +1,43 @@
 ---
-title: "Sevā: The Heart of Spiritual Citizenship"
-dek: "[Dek.]"
-authors: [marcy-braverman-goldstein]
-topics: [spiritual-citizenship]
-date: 2024-12-04
+title: 'Sevā: The Heart of Spiritual Citizenship'
+dek: '[Dek.]'
+authors:
+  - marcy-braverman-goldstein
+topics:
+  - spiritual-citizenship
+date: '2024-12-04'
 art: citizenship
-image: "https://images.squarespace-cdn.com/content/v1/6269d46844c82f0cce6dbac2/1651104737837-TTRYUUSKEOG1MR3UUZAS/Tarka_06_SC_spread_2.jpg?format=1000w"
+image: >-
+  https://images.squarespace-cdn.com/content/v1/6269d46844c82f0cce6dbac2/1651104737837-TTRYUUSKEOG1MR3UUZAS/Tarka_06_SC_spread_2.jpg?format=1000w
+substack: seva-the-heart-of-spiritual-citizenship
+substackUrl: 'https://read.tarkajournal.com/p/seva-the-heart-of-spiritual-citizenship'
+substackAudience: everyone
 ---
 
-*Body to be imported from Substack.*
+![](https://substackcdn.com/image/fetch/$s_!sKME!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F742e1f18-073a-49fd-a928-daa85fde5478_1200x600.jpeg)
+
+We say, read, hear, and chant, “May all people be happy ~ *lokāḥ samastāḥ sukhino bhavantu*!” But what are we \*doing\* to make it happen? Are we actively engaged in creating happiness for us all? Are we devotedly working for the well-being of humanity, remembering that actions ricochet off one another in an endless dynamic that affects each person? Phenomena are interdependently co-arising (*pratītya-samutpāda*), so everyone’s happiness is inextricably connected. What are YOU doing for people, now (*atha*)?
+
+In Indian traditions, the spirit of *sevā* (Sanskrit, “selfless service”) often centers around bhakti-yogis for whom this practice is the sole aim of life. The etymology of the word *bhakti* is even infused with the concept of *sev*ā. Typically translated as “devotion,” *bhakti* derives from the verbal root /*bhaj* (to share, serve, honor, love, adore); this meaning suggests an intimate, participatory relationship wherein love and service are inherent in one another. And the etymology of *sevā* similarly reflects an affinity between love and service stemming from its verbal root /*sev* (to dwell or stay; to serve, wait or attend upon, honor, obey, worship). Bhakti-yogis serve, honor, and adore their teachers, God/Goddess, and humanity.
+
+Inspiration for *sevā* can be found in many texts such as the *Bhagavad-gītā* (2nd c. BCE) where Kṛṣṇa explains to Arjuna the importance of service (*sevā*) and not being selfishly attached to the fruit of actions (*karma-phala*).
+
+> Learn this by humble submission, inquiry, and service (sevā). The seers of truth are knowers who will impart knowledge to you. // 4.34 //
+
+> It is in action alone that you have a claim, never to the fruits of action (karma-phala) at any time. Never let the fruits of action be your motive; never let your attachment be to inaction. // 2.47 //
+
+Selfless service reflects people’s yearning to grow a relationship with God/Goddess, help others, and heal the world. Offered without expectation of reward, *sevā* is a central practice in Indian traditions. Especially since the mid-late 20th century, travel to ashrams, the internet, and social media have allowed people from all cultures to discover *sevā* and develop it in ways that increasingly benefit everyone.
+
+*Sevā* is featured as a main practice with slightly different emphases at spiritual living communities worldwide. For instance, the Himalayan Institute explains that it is “actions performed with a sense of gratitude, compassion, respect for others, and a heartfelt desire to benefit humanity. The spirit of selfless service promotes a gradual realization of our full inner potential, and, as we gain more self-confidence in our ability, we can build a better world.” For seekers on the Siddha Yoga path, it is prominent alongside other practices such as meditation, chanting, study, hatha yoga, and dakshina. Gurumayi Chidvilasananda writes in her book, *Enthusiasm*: “It is seva that accelerates the sadhana of a seeker and lights the path to God.” Her New Year’s message at the turn of the millennium expressed that *sevā* is “uninterrupted loving service’ as a way to dissolve that which separates us from the constant experience of divine love. As we cultivate an attitude of service, we learn how to make all of our life’s work service to God; all aspects of our life become yoga. Ultimately, we come to understand that serving humanity and serving God are one and the same.” The Nalanda Institute for Contemplative Science embraces Buddha’s teachings with respect to the vow of bodhisattvas who are devoted to the welfare of others: “We train people from all walks of life in timeless contemplative skills informed by practical neuropsychology to empower themselves and others to cultivate a wise mind, compassionate heart, and altruistic way of being in our interdependent world.” The Neem Karoli Baba Ashram also highlights the centrality of *sevā*: “Love. Serve. Remember. All members of the ashram community contribute to the sacredness of this place which is a haven of peace and spiritual inspiration for hundreds of visitors and guests each year. We practice bhakti yoga-chanting and devotional practices, and karma yoga or seva-selfless service to God and creation.”
+
+The commitment to serving humanity can be seen specifically through the international work of Seva Foundation, a non-profit that envisions a world free of avoidable blindness. “Seva builds sustainable . . . systems worldwide by creating access to eye care. . . . Since 1978, Seva has empowered underserved communities and provided eye care services to more than 46 million people around the world.” A beloved kirtan singer, Jai Uttal performed a Seva Foundation benefit concert at the Palace of Fine Arts Theater in 2013. Each ticket sold provided a cataract surgery for someone in need. While I was writing this article, a sponsored advertisement popped up on my Facebook feed: “We are honored to have been named today as the 2021 Grand Prize Winner of Nicholas Kristof’s #HolidayImpactPrize!” This recognition by an American journalist, currently running for Governor of the State of Oregon, celebrates Seva Foundation’s medical treatments for people in need. Facilitated by the internet and social media, people across the globe are now benefiting from this ancient Indian spiritual practice.
+
+The globalization of *sevā* is evident also through the work of Sewa International, a Hindu based humanitarian non-profit organization founded in 2003 that specializes in disaster relief and rehabilitation. Programs focus on families, child, tribal and refugee welfare, women’s empowerment, health, and education. The first of its ten guiding principles grounds its practice in ancient Indian teachings: “We believe in the Dharmic principles of ‘Serving Humanity is Serving Divinity’ and ‘Unity in Diversity.’”
+
+Another organization recently recognized for its selfless service is United Sikhs whose motto is to Recognize the Human Race as One. The history of *sevā* in the Sikh tradition dates back in India to its founder Guru Nanek (15th c. C.E.) who emphasized the importance of caring for people in need, irrespective of religious, social, caste, and political hegemonies. Teaching that God dwells in the hearts of all people irrespective of their religious affiliations, he established *langar*, distributing free meals to the hungry, which is based on the value of *vand chakko* (serve others and share food). Another notable expression of *sevā* occurred during the Covid 19 pandemic when United Sikhs volunteers helped transport the overwhelming number of deceased bodies for proper cremation rituals.
+
+The practices and goals of *sevā* are similar among people worldwide whose acts of selfless service are not grounded in India’s dharma traditions. For instance, Judaism focuses on doing *mitzvahs* (Hebrew, good deed; from Aramaic *tzavta* “to attach or join”), which create a relationship between people who altogether aim to repair the world, thereby producing a harmonious state that receives the boundless light of God. The Roman Catholic Mother Teresa heard the voice of Christ call her to help impoverished people and then founded the Missionaries of Charity. Remembering that “when you judge someone, you have no time to love them,” she improved people’s lives through selfless service that modeled universal love. Islam emphasizes the importance of considering the happiness and welfare of others before oneself (*al-’eethar*), which allows faith to grow and become complete.
+
+Is *sevā* by any name, in any language, the same selfless service? As linguaphiles might have noticed, the etymologically related words *sevā* and “serve” sound similar and are somewhat synonymous, both deriving from the Proto-Indo European root /*seruo*. While distinctive, nuanced practices and goals shine across the world’s traditions, there is something essential throughout diverse examples globally that reveals the common human yearning to uplift people. We all know the advice, “the more you give, the more you get.” The meaning of this English language mantra, succinctly captured by the Sanskrit word *sevā*, is the heart of spiritual citizenship. All phenomena are interdependently co-arising (*pratītya-samutpāda*). Everyone’s happiness is inextricably connected. *Carpe Diem*! Serve selflessly now (*atha*) to actualize our lofty goal:
+
+> “May all people be happy ~ *lokāḥ samastāḥ sukhino bhavantu*!”
