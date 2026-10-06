@@ -1,7 +1,7 @@
 /**
  * Annual Congress of Scholar-Practitioners — 2027 virtual pilot, 10–11 April 2027.
  * Format follows the Contemplative Consortium and Tarka Institute founding documents.
- * Dates, speakers and prices are proposals until confirmed.
+ * Dates and speakers are proposals until confirmed. Prices set Oct 2026: Full Pass $95 (early bird $75 to 1 Feb 2027), Supporter $175.
  */
 export const congress = {
   name: "Annual Congress of Scholar-Practitioners",
@@ -22,7 +22,18 @@ export const congress = {
   ],
   passes: [
     { name: "Open sessions", price: "Free", body: "Watch the keynote, panels and closing session live." },
-    { name: "Full Pass", price: "[PRICE]", body: "Everything, plus both workshops, all replays and the digital Congress reader.", featured: true },
+    {
+      name: "Full Pass",
+      price: "$95",
+      note: "Early bird $75 until 1 February 2027",
+      body: "Everything, plus both workshops, all replays and the digital Congress reader.",
+      featured: true,
+    },
+    {
+      name: "Supporter Pass",
+      price: "$175",
+      body: "A Full Pass, plus a free place for a student or early-career scholar who couldn't otherwise attend.",
+    },
     { name: "Students & Consortium members", price: "Free", body: "Full Pass for students and for staff of Consortium member institutions." },
   ],
 };

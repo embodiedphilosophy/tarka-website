@@ -83,6 +83,7 @@ export default function CongressPage() {
               <div key={p.name} className={`price-card ${p.featured ? "price-card--featured" : ""}`}>
                 <b className="h-card" style={{ fontSize: 28 }}>{p.name}</b>
                 <span className="price-card__price">{p.price}</span>
+                {"note" in p && p.note && <span className="tag tag--madder">{p.note}</span>}
                 <span className="body-l" style={{ fontSize: 16 }}>{p.body}</span>
               </div>
             ))}
