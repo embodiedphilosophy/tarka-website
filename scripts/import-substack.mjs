@@ -157,7 +157,11 @@ async function writeArticle(file, existing, post) {
   unknown.forEach((n) => report.unknownAuthors.add(n));
 
   if (isBlank(data.title)) data.title = full.title;
-  if (isBlank(data.dek) && full.subtitle) data.dek = full.subtitle;
+  // Tarka's Substack subtitles are often just the byline ("By Katy Jane"); the page already shows the
+  // author, so only use a subtitle as the dek when it isn't one.
+  const isByline = (t) => /^\s*by\s/i.test(t || "");
+  if (isBlank(data.dek) && full.subtitle && !isByline(full.subtitle)) data.dek = full.subtitle;
+  if (isByline(data.dek)) data.dek = "[Dek.]"; // undo bylines written by earlier imports
   const onlyEditors = Array.isArray(data.authors) && data.authors.length === 1 && data.authors[0] === "tarka-editors";
   if (isBlank(data.authors) || (onlyEditors && slugs.length)) data.authors = slugs.length ? slugs : ["tarka-editors"];
   if (isBlank(data.date)) data.date = isoDay(full.post_date);
