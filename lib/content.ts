@@ -48,6 +48,7 @@ function readArticleFile(file: string): { meta: ArticleMeta; body: string } {
       devanagari: data.devanagari ? String(data.devanagari) : undefined,
       sample: Boolean(data.sample),
       substackUrl: data.substackUrl ? String(data.substackUrl) : undefined,
+      paywall: Boolean(data.paywall),
       featured: Boolean(data.featured),
       readingMinutes: Math.max(1, Math.round(words / 230)),
     },

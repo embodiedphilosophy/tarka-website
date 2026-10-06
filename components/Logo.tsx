@@ -10,7 +10,7 @@ export default function Logo({ height = 40, light = false }: { height?: number; 
       width={Math.round(height * (1440 / 354))}
       height={height}
       className="logo"
-      style={{ height, width: "auto", display: "block", filter: light ? "invert(1)" : undefined }}
+      style={{ height, width: "auto", maxWidth: "100%", objectFit: "contain", alignSelf: "flex-start", flex: "none", display: "block", filter: light ? "invert(1)" : undefined }}
     />
   );
 }

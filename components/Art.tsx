@@ -90,7 +90,7 @@ export function Cover({
   const label = `Cover of ${number != null ? `No. ${number}, ` : ""}${title}`;
   if (image) {
     // eslint-disable-next-line @next/next/no-img-element
-    return <img src={image} alt={label} className={className} style={{ aspectRatio: "3 / 4", objectFit: "cover", width: "100%", display: "block" }} />;
+    return <img src={image} alt={label} className={className} style={{ aspectRatio: "3 / 4", objectFit: "cover", display: "block" }} />;
   }
   const p = palettes[art];
   const long = title.length > 18;

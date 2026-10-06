@@ -71,6 +71,7 @@ export type ArticleMeta = {
   devanagari?: string; // ornament above the title, e.g. "उत्पलदेव"
   sample?: boolean; // shows the "sample copy" notice
   substackUrl?: string; // where the piece is also published
+  paywall?: boolean; // paid on Substack: the site shows a preview and links there
   featured?: boolean; // candidate for the homepage lead
   readingMinutes: number;
 };

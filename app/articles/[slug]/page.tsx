@@ -88,7 +88,21 @@ export default async function ArticlePage({ params }: Props) {
         </header>
 
         <div className="container-narrow article-layout">
-          <div className="prose" dangerouslySetInnerHTML={{ __html: article.html }} />
+          <div>
+            <div className="prose" dangerouslySetInnerHTML={{ __html: article.html }} />
+            {article.paywall && article.substackUrl && (
+              <div className="paywall-card">
+                <b className="h-card">This essay continues for paid subscribers</b>
+                <p className="body-l" style={{ fontSize: 16 }}>
+                  The full text is on Tarka's Substack for paying members, who keep the journal free to read everywhere else.
+                </p>
+                <div className="btn-row">
+                  <a href={article.substackUrl} className="btn btn--primary">Continue on Substack</a>
+                  <Link href="/subscribe" className="btn btn--outline">Ways to subscribe</Link>
+                </div>
+              </div>
+            )}
+          </div>
           <aside className="article-aside" aria-label="About this essay">
             {issue && (
               <div className="aside-card">
@@ -97,7 +111,7 @@ export default async function ArticlePage({ params }: Props) {
                 <Link href="/print" style={{ color: "var(--indigo)", fontWeight: 600 }}>Get the print issue →</Link>
               </div>
             )}
-            {article.substackUrl && (
+            {article.substackUrl && !article.paywall && (
               <a href={article.substackUrl} className="small link-underline">Also on Substack</a>
             )}
           </aside>
