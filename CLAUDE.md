@@ -7,5 +7,6 @@
 - Colours: paper `#F6F3EC`, ink `#1B1A17`, indigo `#2E3F7F` (actions/links), madder `#9C3B22` (series, highlights), gold `#D9A441`. Type: Newsreader (serif), IBM Plex Sans (UI), IBM Plex Mono (labels), Noto Serif Devanagari.
 - Every page should end in a way to subscribe (print or newsletter). The header's Subscribe button goes to `/subscribe`; ads go to `/print` or `/newsletter`.
 - Don't invent content. Use `[bracketed placeholders]` for anything not supplied.
-- Images: upload to Vercel Blob and use the URL in `image` / `coverImage` fields. Tarka art is for covers.
+- Images: all real Tarka art (logo, issue covers + spreads, article art, edition covers) is listed in `content/art.ts` — reference it from there, never hard-code image URLs in pages. See `docs/ART.md`. Drawn art in `components/Art.tsx` is only a fallback.
+- The art currently loads from Squarespace's CDN; run `node scripts/localize-art.mjs` before Squarespace is cancelled.
 - Check `npm run build` passes before pushing.

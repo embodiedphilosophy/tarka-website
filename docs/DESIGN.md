@@ -26,4 +26,4 @@ Source: the “Tarka Site — Sitemap & Mockup” canvas. Implemented in `app/gl
 - Cards: art (3:2) → tag → serif title → dek → author.
 - One dark “Tarka in print” band per long page.
 - Every page ends in a subscribe path (print or newsletter).
-- Covers and article art are drawn yantra motifs (`components/Art.tsx`) until real Tarka art is uploaded.
+- Covers, the logo and No. 9 article art use real Tarka art (`content/art.ts`, see `docs/ART.md`). The drawn yantra motifs (`components/Art.tsx`) are the fallback for anything without art yet.

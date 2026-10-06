@@ -6,6 +6,7 @@ issue: 9-on-power
 topics: [jainism, politics]
 date: 2026-07-22
 art: madder
+image: "https://images.squarespace-cdn.com/content/v1/6269d46844c82f0cce6dbac2/1784837069515-C4CL4WJ8WLBMDLA6SN17/Tarka-09-Power-Wide-Spreads-1.jpg?format=1000w" # real Tarka art — see content/art.ts
 featured: true
 ---
 

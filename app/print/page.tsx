@@ -3,6 +3,7 @@ import Link from "next/link";
 import { getIssues } from "@/lib/content";
 import { mainNav } from "@/lib/site";
 import { Cover } from "@/components/Art";
+import { Logo } from "@/components/Logo";
 
 export const metadata: Metadata = {
   title: "Tarka in print",
@@ -27,14 +28,16 @@ function CheckoutButton({ plan, label, className }: { plan: string; label: strin
 
 export default async function PrintPage({ searchParams }: { searchParams: Promise<{ soon?: string }> }) {
   const { soon } = await searchParams;
-  const covers = getIssues().slice(0, 3);
+  // newest three issues that have real cover art (falls back to drawn covers if fewer than three)
+  const withArt = getIssues().filter((i) => i.coverImage);
+  const covers = (withArt.length >= 3 ? withArt : getIssues()).slice(0, 3);
   const ordered = covers.length === 3 ? [covers[1], covers[0], covers[2]] : covers;
 
   return (
     <main>
       <section className="print-hero">
         <div className="container site-header__main" style={{ borderBottom: "1px solid #3a3832", alignItems: "center", paddingBlock: 14 }}>
-          <Link href="/" className="wordmark wordmark--m" aria-label="Tarka home">TARKA</Link>
+          <Link href="/" className="wordmark wordmark--m" aria-label="Tarka home"><Logo onDark /></Link>
           <nav aria-label="Main" className="main-nav">
             {mainNav.map((i) => <Link key={i.href} href={i.href}>{i.label}</Link>)}
             <a href="#pricing" className="btn btn--cream">Subscribe</a>
@@ -51,7 +54,7 @@ export default async function PrintPage({ searchParams }: { searchParams: Promis
             </div>
           </div>
           <div className="print-band__covers" style={{ flex: "1 1 420px" }}>
-            {ordered.map((i) => <Cover key={i.slug} art={i.art} title={i.title} number={i.number} image={i.coverImage} />)}
+            {ordered.map((i) => <Cover key={i.slug} art={i.art} title={i.title} number={i.number} image={i.coverImage} crop={i.coverCrop} />)}
           </div>
         </div>
       </section>

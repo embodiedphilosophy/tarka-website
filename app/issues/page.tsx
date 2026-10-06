@@ -22,7 +22,7 @@ export default function IssuesPage() {
       {next && (
         <section className="feature-panel" aria-labelledby="next-issue">
           <Link href={`/issues/${next.slug}`} className="feature-panel__cover">
-            <Cover art={next.art} title={next.title} number={next.number} image={next.coverImage} />
+            <Cover art={next.art} title={next.title} number={next.number} image={next.coverImage} crop={next.coverCrop} />
           </Link>
           <div className="feature-panel__copy">
             <span className="eyebrow" style={{ color: "var(--madder)" }}>
