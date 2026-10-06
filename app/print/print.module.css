@@ -1,0 +1,435 @@
+/* /print — Tarka print-subscription landing page.
+   Uses the site's :root tokens (--paper, --ink, --indigo, --gold, --font-serif …);
+   fallbacks are only there so the file renders on its own. */
+
+.page {
+  --w: 880px;
+  background: var(--paper, #f6f3ec);
+  color: var(--ink, #1b1a17);
+  overflow-x: clip;
+  padding-bottom: 96px;
+}
+
+.eyebrow,
+.topics {
+  font-family: var(--font-sans, system-ui, sans-serif);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--faint, #6b675e);
+}
+
+.sectionTitle {
+  font-family: var(--font-serif, Georgia, serif);
+  font-weight: 500;
+  font-size: clamp(26px, 3.2vw, 34px);
+  letter-spacing: -0.01em;
+  text-align: center;
+  margin: 0 0 32px;
+}
+
+/* ——— Hero ——— */
+.hero {
+  max-width: var(--w);
+  margin: 0 auto;
+  padding: 40px 16px 0;
+  text-align: center;
+}
+.topics {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4px 0;
+  margin: 0 0 20px;
+}
+.dot {
+  margin: 0 12px;
+  color: var(--rule-strong, #b9b3a5);
+}
+.masthead {
+  margin: 0 auto;
+  width: min(460px, 78vw);
+  line-height: 0;
+}
+.masthead img {
+  width: 100%;
+  height: auto;
+}
+.tagline {
+  font-family: var(--font-serif, Georgia, serif);
+  font-size: clamp(19px, 2.2vw, 23px);
+  line-height: 1.4;
+  color: var(--text, #3a3832);
+  max-width: 38ch;
+  margin: 18px auto 0;
+  text-wrap: balance;
+}
+
+/* ——— Cover crop ———
+   Source mockups are 1000×686 with the cover at roughly x 30.6–69.4%, y 12.8–87.5%.
+   We frame just the cover and add our own shadow. */
+.cover {
+  position: relative;
+  aspect-ratio: 388 / 512;
+  overflow: hidden;
+  border-radius: 2px;
+  background: var(--paper-2, #ede8dd);
+  box-shadow:
+    0 1px 2px rgb(27 26 23 / 0.12),
+    0 18px 40px -12px rgb(27 26 23 / 0.35);
+}
+.cover img {
+  position: absolute;
+  width: 257.7%;
+  max-width: none;
+  left: -78.9%;
+  top: -17.1%;
+}
+
+/* ——— Fanned covers ——— */
+.fan {
+  position: relative;
+  height: clamp(300px, 46vw, 470px);
+  max-width: 760px;
+  margin: 24px auto 8px;
+}
+.fan .cover {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: clamp(190px, 30vw, 300px);
+  transform-origin: 50% 100%;
+}
+.fanCenter {
+  z-index: 2;
+  transform: translateX(-50%);
+  animation: rise 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+.fanLeft {
+  transform: translateX(-108%) rotate(-9deg);
+  animation: fanL 1s 0.15s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+.fanRight {
+  transform: translateX(8%) rotate(9deg);
+  animation: fanR 1s 0.15s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+@keyframes rise {
+  from { transform: translate(-50%, 24px); opacity: 0; }
+}
+@keyframes fanL {
+  from { transform: translateX(-50%) rotate(0); opacity: 0; }
+}
+@keyframes fanR {
+  from { transform: translateX(-50%) rotate(0); opacity: 0; }
+}
+
+/* ——— Subscribe block ——— */
+.subscribe {
+  max-width: var(--w);
+  margin: 0 auto;
+  padding: 40px 16px;
+  text-align: center;
+}
+.subscribeTitle {
+  font-family: var(--font-serif, Georgia, serif);
+  font-weight: 600;
+  font-size: 22px;
+  margin: 0 0 20px;
+}
+.plans {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 260px));
+  justify-content: center;
+  gap: 14px;
+}
+.plan {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 16px 20px;
+  background: var(--gold, #d9a441);
+  color: var(--ink, #1b1a17);
+  font-family: var(--font-mono, ui-monospace, monospace);
+  font-size: 16px;
+  text-decoration: none;
+  border: 1px solid transparent;
+  border-radius: var(--radius, 4px);
+  transition: background 0.15s, border-color 0.15s, transform 0.15s;
+}
+.plan small {
+  font-size: 12px;
+  opacity: 0.7;
+}
+.plan:hover {
+  background: var(--cream, #f4ebdd);
+  border-color: var(--ink, #1b1a17);
+}
+.plan:active {
+  transform: translateY(1px);
+}
+.plan:focus-visible {
+  outline: 2px solid var(--indigo, #2e3f7f);
+  outline-offset: 3px;
+}
+.subscribeNote {
+  margin: 16px 0 0;
+  font-family: var(--font-serif, Georgia, serif);
+  font-size: 17px;
+  color: var(--text, #3a3832);
+}
+.subscribeNote a,
+.benefit a {
+  color: inherit;
+  text-underline-offset: 3px;
+}
+
+/* ——— Benefits ——— */
+.benefits {
+  max-width: var(--w);
+  margin: 0 auto;
+  padding: 56px 16px 24px;
+}
+.benefitGrid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.benefit {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  align-items: center;
+  gap: 20px;
+  min-height: 96px;
+  padding: 0 24px 0 0;
+  background: var(--white, #fff);
+  border: 1px solid var(--rule, #d9d4c7);
+  overflow: hidden;
+}
+.benefit img {
+  width: 120px;
+  height: 100%;
+  min-height: 96px;
+  object-fit: cover;
+}
+.benefit p {
+  margin: 0;
+  font-family: var(--font-serif, Georgia, serif);
+  font-size: 18px;
+  line-height: 1.35;
+}
+.benefitWide {
+  grid-column: 1 / -1;
+}
+
+/* ——— Contributors ——— */
+.contributors {
+  max-width: var(--w);
+  margin: 0 auto;
+  padding: 48px 16px 16px;
+  text-align: center;
+}
+.contributors ul {
+  list-style: none;
+  margin: 14px 0 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 28px;
+  font-family: var(--font-serif, Georgia, serif);
+  font-size: 19px;
+  font-style: italic;
+  color: var(--text, #3a3832);
+}
+
+/* ——— Spreads marquee ——— */
+.spreads {
+  padding: 48px 0 32px;
+  mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+}
+.track {
+  display: flex;
+  gap: 20px;
+  width: max-content;
+  animation: marquee 80s linear infinite;
+}
+.track:hover {
+  animation-play-state: paused;
+}
+.track img {
+  height: clamp(240px, 34vw, 420px);
+  width: auto;
+  aspect-ratio: 1000 / 686;
+  object-fit: cover;
+  border-radius: 2px;
+}
+@keyframes marquee {
+  to { transform: translateX(calc(-50% - 10px)); }
+}
+
+/* ——— Testimonials ——— */
+.testimonials {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 48px 16px;
+}
+.testimonials ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+}
+.testimonials li {
+  background: var(--white, #fff);
+  border: 1px solid var(--rule, #d9d4c7);
+  padding: 24px;
+}
+.testimonials blockquote {
+  margin: 0 0 16px;
+  font-family: var(--font-serif, Georgia, serif);
+  font-size: 18px;
+  line-height: 1.45;
+}
+.testimonials li p {
+  margin: 0;
+  font-family: var(--font-sans, system-ui, sans-serif);
+  font-size: 13px;
+  font-weight: 600;
+}
+.testimonials li p span {
+  font-weight: 400;
+  color: var(--muted, #5a574f);
+}
+
+/* ——— Closer ——— */
+.closer {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 72px 16px 8px;
+  text-align: center;
+}
+.closerTitle {
+  font-family: var(--font-serif, Georgia, serif);
+  font-weight: 500;
+  font-size: clamp(32px, 5vw, 54px);
+  line-height: 1.12;
+  letter-spacing: -0.015em;
+  margin: 0 0 48px;
+}
+.underline {
+  text-decoration: underline;
+  text-decoration-color: var(--madder, #9c3b22);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.14em;
+}
+.row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(16px, 4vw, 48px);
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+/* ——— FAQ ——— */
+.faq {
+  max-width: var(--w);
+  margin: 0 auto;
+  padding: 56px 16px 0;
+}
+.faq .sectionTitle {
+  text-align: left;
+}
+.faqItem {
+  border-bottom: 1px solid var(--ink, #1b1a17);
+}
+.faqItem:first-of-type {
+  border-top: 1px solid var(--ink, #1b1a17);
+}
+.faqItem summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  padding: 22px 0;
+  font-family: var(--font-serif, Georgia, serif);
+  font-size: clamp(20px, 2.4vw, 26px);
+  line-height: 1.25;
+}
+.faqItem summary::-webkit-details-marker {
+  display: none;
+}
+.faqItem summary:focus-visible {
+  outline: 2px solid var(--indigo, #2e3f7f);
+  outline-offset: 4px;
+}
+.plus {
+  position: relative;
+  flex: none;
+  width: 22px;
+  height: 22px;
+}
+.plus::before,
+.plus::after {
+  content: "";
+  position: absolute;
+  inset: 50% 0 auto;
+  height: 1.5px;
+  background: currentColor;
+  transition: transform 0.2s;
+}
+.plus::after {
+  transform: rotate(90deg);
+}
+.faqItem[open] .plus::after {
+  transform: rotate(0);
+}
+.faqItem p {
+  margin: 0 0 24px;
+  max-width: 62ch;
+  font-family: var(--font-serif, Georgia, serif);
+  font-size: 18px;
+  line-height: 1.55;
+  color: var(--text, #3a3832);
+}
+
+/* ——— Small screens ——— */
+@media (max-width: 680px) {
+  .plans,
+  .benefitGrid {
+    grid-template-columns: 1fr;
+  }
+  .benefit {
+    grid-template-columns: 96px 1fr;
+    gap: 16px;
+  }
+  .benefit img {
+    width: 96px;
+  }
+  .benefit p {
+    font-size: 16px;
+  }
+  .fanLeft { transform: translateX(-92%) rotate(-8deg); }
+  .fanRight { transform: translateX(-8%) rotate(8deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fanCenter,
+  .fanLeft,
+  .fanRight {
+    animation: none;
+  }
+  .track {
+    animation: none;
+  }
+  .spreads {
+    overflow-x: auto;
+  }
+}
