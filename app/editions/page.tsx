@@ -16,7 +16,7 @@ export default function EditionsPage() {
       <section className="grid-covers" style={{ gridTemplateColumns: "repeat(auto-fill, minmax(220px, 1fr))" }}>
         {editions.map((e) => (
           <Link key={e.slug} href={`/editions/${e.slug}`} className="cover-link">
-            <EditionCover art={e.art} title={e.title} image={e.coverImage} />
+            <EditionCover art={e.art} title={e.title} image={e.coverImage} crop={e.coverCrop} />
             <span className="serif" style={{ fontSize: 24, lineHeight: 1.2 }}>{e.title}</span>
             {e.subtitle && <span className="small">{e.subtitle}</span>}
             <span className="tag">{e.status === "available" ? "Available" : "Forthcoming"}</span>

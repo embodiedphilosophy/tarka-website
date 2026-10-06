@@ -4,14 +4,16 @@ import { Cover } from "./Art";
 
 /** Dark "Tarka in print" promo used on Home, Issue and Topic pages. */
 export default function PrintBand() {
-  const covers = getIssues().slice(0, 3);
+  // newest three issues that have real cover art (falls back to drawn covers if fewer than three)
+  const withArt = getIssues().filter((i) => i.coverImage);
+  const covers = (withArt.length >= 3 ? withArt : getIssues()).slice(0, 3);
   // middle cover = newest
   const ordered = covers.length === 3 ? [covers[1], covers[0], covers[2]] : covers;
   return (
     <section className="band-dark print-band" aria-labelledby="print-band-title">
       <div className="print-band__covers">
         {ordered.map((i) => (
-          <Cover key={i.slug} art={i.art} title={i.title} number={i.number} image={i.coverImage} />
+          <Cover key={i.slug} art={i.art} title={i.title} number={i.number} image={i.coverImage} crop={i.coverCrop} />
         ))}
       </div>
       <div className="print-band__copy">

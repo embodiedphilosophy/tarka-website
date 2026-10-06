@@ -23,7 +23,7 @@ export default async function EditionPage({ params }: Props) {
     <main className="container page">
       <section className="feature-panel">
         <div className="feature-panel__cover" style={{ flexBasis: "min(260px, 100%)" }}>
-          <EditionCover art={e.art} title={e.title} image={e.coverImage} />
+          <EditionCover art={e.art} title={e.title} image={e.coverImage} crop={e.coverCrop} />
         </div>
         <div className="feature-panel__copy">
           <span className="eyebrow">Tarka Editions</span>

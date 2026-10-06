@@ -79,7 +79,7 @@ export default function HomePage() {
             <h2 className="h-section">Tarka Editions</h2>
             <div style={{ display: "flex", gap: 24, alignItems: "flex-start" }}>
               <Link href={`/editions/${edition.slug}`} style={{ width: 130, flex: "none" }}>
-                <EditionCover art={edition.art} title={edition.title} image={edition.coverImage} />
+                <EditionCover art={edition.art} title={edition.title} image={edition.coverImage} crop={edition.coverCrop} />
               </Link>
               <div className="stack" style={{ gap: 8 }}>
                 <b className="serif" style={{ fontSize: 22, fontWeight: 500 }}>{edition.title}</b>

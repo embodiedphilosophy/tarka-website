@@ -6,6 +6,8 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       // Vercel Blob (like EP's ep-media store) for covers and Tarka art
       { protocol: "https", hostname: "*.public.blob.vercel-storage.com" },
+      // Current Tarka art on Squarespace's CDN (content/art.ts) — remove once localized
+      { protocol: "https", hostname: "images.squarespace-cdn.com" },
       // Substack-hosted images (podcast artwork)
       { protocol: "https", hostname: "substackcdn.com" },
     ],

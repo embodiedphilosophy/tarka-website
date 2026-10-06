@@ -1,8 +1,10 @@
-import type { ArtKey } from "@/lib/types";
+import type { ArtKey, Crop } from "@/lib/types";
 
 /**
- * Drawn yantra-style covers and article art — stand-ins until real Tarka art is uploaded.
- * Each issue/article picks an ArtKey; an `image` URL on the content overrides these.
+ * Covers and article art.
+ * Real Tarka art (content/art.ts) is used wherever it exists: pass `image` (and `crop` when the
+ * image is a product photo with the cover inside it). The drawn yantra-style art below is the
+ * fallback for anything that doesn't have real art yet (e.g. a forthcoming issue).
  */
 type Palette = { bg: string; fg: string; accent: string; motif: "yantra" | "arch" | "circles" | "split" | "horizon" | "lotus" };
 
@@ -73,21 +75,43 @@ function Motif({ p, cx, cy, s }: { p: Palette; cx: number; cy: number; s: number
   }
 }
 
+/** Shows just the `crop` box of a larger photo, filling the element's width. */
+function CroppedImage({ src, crop, alt, className }: { src: string; crop: Crop; alt: string; className: string }) {
+  return (
+    <div className={`${className} cover--photo`} style={{ aspectRatio: `${crop.w} / ${crop.h}` }} role="img" aria-label={alt}>
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src={src}
+        alt=""
+        loading="lazy"
+        style={{
+          width: `${(crop.sourceWidth / crop.w) * 100}%`,
+          left: `${(-crop.x / crop.w) * 100}%`,
+          top: `${(-crop.y / crop.h) * 100}%`,
+        }}
+      />
+    </div>
+  );
+}
+
 /** Issue cover, 3:4. */
 export function Cover({
   art,
   title,
   number,
   image,
+  crop,
   className = "cover",
 }: {
   art: ArtKey;
   title: string;
   number?: number;
   image?: string;
+  crop?: Crop;
   className?: string;
 }) {
   const label = `Cover of ${number != null ? `No. ${number}, ` : ""}${title}`;
+  if (image && crop) return <CroppedImage src={image} crop={crop} alt={label} className={className} />;
   if (image) {
     // eslint-disable-next-line @next/next/no-img-element
     return <img src={image} alt={label} className={className} style={{ aspectRatio: "3 / 4", objectFit: "cover" }} />;
@@ -121,7 +145,7 @@ export function Cover({
 export function ArticleArt({ art, title, image, wide = false }: { art: ArtKey; title: string; image?: string; wide?: boolean }) {
   if (image) {
     // eslint-disable-next-line @next/next/no-img-element
-    return <img src={image} alt="" />;
+    return <img src={image} alt="" loading="lazy" />;
   }
   const p = palettes[art];
   const w = wide ? 640 : 300;
@@ -137,7 +161,8 @@ export function ArticleArt({ art, title, image, wide = false }: { art: ArtKey; t
 }
 
 /** Book cover for Tarka Editions, 2:3. */
-export function EditionCover({ art, title, image }: { art: ArtKey; title: string; image?: string }) {
+export function EditionCover({ art, title, image, crop }: { art: ArtKey; title: string; image?: string; crop?: Crop }) {
+  if (image && crop) return <CroppedImage src={image} crop={crop} alt={`Cover of ${title}`} className="cover" />;
   if (image) {
     // eslint-disable-next-line @next/next/no-img-element
     return <img src={image} alt={`Cover of ${title}`} className="cover" />;

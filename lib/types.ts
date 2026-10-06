@@ -4,7 +4,7 @@
  * Today they're filled from /content; later lib/content.ts can read Sanity instead.
  */
 
-/** Colour + motif used to draw a cover or article artwork until real Tarka art exists. */
+/** Colour + motif for the drawn fallback art, used wherever no real Tarka art exists yet. */
 export type ArtKey =
   | "madder"
   | "indigo"
@@ -17,6 +17,9 @@ export type ArtKey =
   | "split"
   | "green";
 
+/** Pixel box to cut out of a source photo (e.g. the front cover inside a product shot). */
+export type Crop = { x: number; y: number; w: number; h: number; sourceWidth: number; sourceHeight: number };
+
 export type Issue = {
   slug: string; // e.g. "9-on-power" → /issues/9-on-power
   number?: number; // leave undefined until confirmed
@@ -26,7 +29,9 @@ export type Issue = {
   description?: string;
   editorsIntro?: string; // Markdown allowed
   art: ArtKey;
-  coverImage?: string; // URL (Vercel Blob) — overrides the drawn cover
+  coverImage?: string; // URL — overrides the drawn cover (see content/art.ts)
+  coverCrop?: Crop; // when coverImage is a product photo, the box holding the front cover
+  spreads?: string[]; // interior spread photos, shown as "Inside the issue"
   printAvailable?: boolean;
 };
 
@@ -50,6 +55,7 @@ export type Edition = {
   description?: string;
   status: "available" | "forthcoming";
   coverImage?: string;
+  coverCrop?: Crop;
   art: ArtKey;
   format?: string;
   price?: string;

@@ -46,7 +46,7 @@ export function ArticleListItem({ article }: { article: ArticleMeta }) {
 export function IssueCover({ issue }: { issue: Issue }) {
   return (
     <Link href={`/issues/${issue.slug}`} className="cover-link">
-      <Cover art={issue.art} title={issue.title} number={issue.number} image={issue.coverImage} />
+      <Cover art={issue.art} title={issue.title} number={issue.number} image={issue.coverImage} crop={issue.coverCrop} />
       <span className="mono small">{issue.number != null ? `No. ${issue.number}` : issue.status === "forthcoming" ? "Forthcoming" : ""}</span>
       <span className="serif" style={{ fontSize: 24, lineHeight: 1.2, marginTop: -4 }}>{issue.title}</span>
       <span className="sr-only">{issueLabel(issue)}</span>

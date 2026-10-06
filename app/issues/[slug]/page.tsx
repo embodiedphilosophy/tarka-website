@@ -32,7 +32,7 @@ export default async function IssuePage({ params }: Props) {
     <main className="container page">
       <section className="feature-panel">
         <div className="feature-panel__cover">
-          <Cover art={issue.art} title={issue.title} number={issue.number} image={issue.coverImage} />
+          <Cover art={issue.art} title={issue.title} number={issue.number} image={issue.coverImage} crop={issue.coverCrop} />
         </div>
         <div className="feature-panel__copy">
           <span className="eyebrow" style={{ color: "var(--madder)" }}>
@@ -77,6 +77,18 @@ export default async function IssuePage({ params }: Props) {
           </div>
         )}
       </section>
+
+      {issue.spreads && issue.spreads.length > 0 && (
+        <section className="stack" style={{ gap: 20 }}>
+          <h2 className="h-section rule-top">Inside the issue</h2>
+          <div className="spreads">
+            {issue.spreads.map((src, n) => (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img key={src} src={src} alt={`${issue.title}, spread ${n + 1}`} loading="lazy" />
+            ))}
+          </div>
+        </section>
+      )}
 
       <nav aria-label="More issues" className="section-head">
         {older ? <Link href={`/issues/${older.slug}`} className="link-underline">← {older.title}</Link> : <span />}
