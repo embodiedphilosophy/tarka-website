@@ -1,0 +1,44 @@
+name: Import from Substack
+
+on:
+  schedule:
+    - cron: "0 7 * * 1" # every Monday, 07:00 UTC
+  workflow_dispatch:
+    inputs:
+      args:
+        description: "Options for the import (e.g. --new for every Substack post)"
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - run: npm ci
+
+      - name: Import essays from Substack
+        env:
+          IMPORT_ARGS: ${{ github.event.inputs.args }}
+        run: npm run import:substack -- $IMPORT_ARGS
+
+      - name: Open pull request
+        uses: peter-evans/create-pull-request@v7
+        with:
+          branch: substack-import
+          delete-branch: true
+          commit-message: Import from Substack
+          title: Import from Substack
+          body: |
+            New or updated essays copied from read.tarkajournal.com by `scripts/import-substack.mjs`.
+            Check the Vercel preview (images, footnotes, Sanskrit diacritics) before merging.
