@@ -1,10 +1,59 @@
 ---
 title: What is the Scholar-Practitioner?
-dek: "[Dek.]"
-authors: [jacob-kyle]
-topics: [teaching]
-date: 2024-06-19
+dek: 'From Issue #0 – "On the Scholar-Practitioner"'
+authors:
+  - jacob-kyle
+topics:
+  - teaching
+date: '2024-06-19'
 art: gold
+image: >-
+  https://substackcdn.com/image/fetch/$s_!9sEy!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Feccfc4b6-5849-41b4-85fb-323f10bfeae2_1062x650.png
+substack: what-is-the-scholar-practitioner
+substackUrl: 'https://read.tarkajournal.com/p/what-is-the-scholar-practitioner'
+substackAudience: everyone
 ---
 
-*Body to be imported from Substack (Issue #0).*
+![](https://substackcdn.com/image/fetch/$s_!9sEy!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Feccfc4b6-5849-41b4-85fb-323f10bfeae2_1062x650.png)
+
+A scholar-practitioner is, put simply, **a scholar who practices**. The term aligns with an emerging movement within academia and independent scholarship to transcend the problematic division between scholarship and practice – a division that has, until recently, dominated much of academic and intellectual culture.
+
+The scholar-practitioner approaches her object of study by privileging the synergy of knowledge and experience. While a scientist of fruit might be privy to the complex chemical makeup of a peach, if he has not yet tasted the nectarian delight of its inner sweetness, can we say that he “knows” the peach? If a scholar of Africa understands the complex political and social dynamics of the continent, the weather patterns, the diversity of flora and fauna, but has never visited there, does she “know” Africa? The scholar-practitioner posits that a knowledge without such experience is incomplete. She is therefore committed to experiential knowledge and the role it plays in shaping and informing more culturally-sanctioned forms of discursive knowledge.
+
+In the study of contemplative traditions, religion, and spirituality, a tendency to study the peach without ever tasting the peach has become the norm – indeed, to taste the peach has been at best frowned upon and at worst grounds for the questioning of one’s scholarly integrity. By ‘tasting the peach’ here of course we mean to engage the rituals, practices, and other bodily comportments that are central to the understanding of a tradition’s worldview. The assumption by many scholars is that one can study these practices from the outside and generate a sufficient understanding of them; further than this, the practicing of the practices, some believe, may likely deter one from acquiring unbiased, “objective” knowledge of their tradition of study.
+
+What constitutes knowledge might be an ongoing philosophical question in discussions of epistemology,[^1] but in the majority of scholarly conversations, what constitutes knowledge is largely assumed – a presupposition that quietly frames the parameters of what is deemed valid, factual, and true. However, what ends up parading as “valid knowledge” often has more to do with political and cultural circumstances than anything like so-called “objective truth.” Indeed, the very notion of “objectivity” presumes a position outside all bias and socially-contextual inclinations, and this notion itself has a history and an origin in the foundations of Western culture. As such, it grounds, supports, and sustains a *politics of knowledge* that privileges one culture’s experience as universally applicable.
+
+In Western culture, a formative period for the politics of knowledge as we experience it today was the “Age of Reason.” Typically referred to as the “Enlightenment,”[^2] this period was characterized by an undermining of the power of the Catholic Church and the monarchy through the dissemination of ideas that called into question some of their fundamental tenets. It also inspired the political revolutions that emerged over the 18th and 19th centuries and supported the new movement of liberalism that fought for individual rights and liberties. However, the universalizing gesture of these principles, while connected with admirable projects of equality and human rights, dovetailed with a capitalist milieu that was similarly proffered as the necessary context through which these principles were to be expressed; in turn, they supported processes of globalization and colonization. These processes then perpetuated not-so-admirable patterns of racism, classism, and xenophobia, which silently persist in the practices of academic scholarship through a subtle denigration of non-Western methodologies, epistemologies, and philosophies.
+
+The intellectual movement of the “Enlightenment” is largely considered a positive moment in Western history, as it led to the supplantation of despotic leadership and autocratic governments with modern democracy and equality before the law. Its devotion to the “sovereignty of reason” over the sovereignty of a monarch made possible the advancement of now taken-for-granted ideals like liberty, constitutional government, tolerance, and the separation of church and state. However, there is a shadow cast by every light as it illuminates new objects, and this shadow took the form of “universal reason.”
+
+The supposed universality of “reason” that undergirded the discourses of the Enlightenment turned out to not be so universal in its application. Those who had apparently risen to the throne of reason were markedly male, white, and cisgendered, while women and people of color were seen as ruled by the emotions and subject to animal instincts that were beneath the dignity of reason. This dichotomy between reason and emotion, or reason and affect, is also predicated upon a dualism between mind and body that was famously articulated by René Descartes (but which actually extends back much further to the origins of Western culture). This dualism suggests that the mind can be purified of all emotional, circumstantial, and cultural content to reveal a pure domain of reason that is considered the locus of all true and relevant knowledge. This dualism then enabled the perspective that any knowledge tainted by emotion, subjectivity or personal bias was to be eradicated. Only by purging knowledge of any symptoms of the body (personal, cultural, or historical) could one arrive at “true,” “objective” knowledge.
+
+The scholar-practitioner pushes back against the effects of this historical development by reclaiming the role of experience in our concepts of knowledge and celebrating the capacity of embodied practices to encode new dimensions of understanding beyond the discursive modes of understanding that have ruled the academic and intellectual status quo. This consideration of the synergy of knowledge and experience is certainly not new, as it picks up a baton that was dropped during the period of Western Enlightenment culture. To reclaim this synergy, then, arguably continues traditions of embodied inquiry that preceded the Enlightenment.[^3] By doing so, it aligns itself with indigenous and other non-Western knowledge systems that never dropped that baton in the first place.
+
+The position of a scholar-practitioner is therefore both directly and indirectly a subversive rejection of the normative impulses of Western intellectual hegemony. It rejects the subtle dynamics of sexism and racism that inform our attitudes about the character of knowledge – dynamics that persist in the dichotomies of reason/affect, objective/subjective, and public/private. It challenges the effectiveness of discursive reason alone to approach clear understanding by highlighting those dimensions of understanding that can only be accessed through embodied epistemologies. It problematizes a paradigm that reduces knowledge to propositional, intellectual knowledge by taking seriously, for example, concepts of knowledge that exceed the purely “mental.” These concepts of knowledge necessitate alternative methodologies – contemplative, embodied, spiritual – through which what these concepts signify might be experienced.
+
+Finally, the scholar-practitioner recognizes that a surefire way to misappropriate the teachings of contemplative traditions is by refusing to engage in the methodologies by means of which these teachings are understood. For example, concepts from the yoga tradition like *samādhi*, *kaivalya*, *puruṣa,* and *ātman* can be investigated *ad nauseam* through the arguments of discursive practice, but until the investigator submits herself to the process of meditative practice, these investigations will be at best hollow gestures, and at worst radical misunderstandings that have a tendency to discredit these experiential concepts as unreal or imaginary.
+
+The emerging movement of the scholar-practitioner calls into question the possibility of the modern academy to support the necessary integration of knowledge and experience. It therefore warrants the evolution of new schools, institutions, and organizations that are free from the limiting beliefs of Western epistemologies. These new schools could offer laboratories for embodied research where practices like meditation, chanting, visualization, ritual, and other forms of embodied inquiry live alongside scholarly exploration and discursive practice. In such contexts, practice is given space to inform and perhaps re-form our knowledge systems and – if we are to take the contemplative traditions at their word – the very nature of our identity as embodied beings.
+
+---
+
+#### Interested in deepening your study and practice? Check out Sādhana School.
+
+In celebration of Embodied Philosophy’s 10-year anniversary, we’re **inviting new students to join our global community** of seekers, practitioners, and teachers with a special membership offer. For those looking for a deeper process of study and practice, for the month of June you can receive **50% off the next year of Sādhana School**, our immersive program and online community of deep practitioners that commences its 2nd year in October 2025. The title and guiding theme for the 2025–2026 Sādhana School ‘school year’ will be **Ancient Texts, Living Paths: Embodied Wisdom for the Modern Mystic, Seeker, and Scholar-Practitioner** — a deep inquiry into how contemplative principles are theorized, practiced, and embodied in the playhouse of modern life through a thematic exploration of foundational texts from the non-dual Śaiva-Śākta Tantric tradition. ***[Enroll here](https://enroll.embodiedphilosophy.com/ss-2025-2026-early-enrollment).***
+
+---
+
+#### Interested in continuing your contemplative education? Check out a few of the online **courses from Tarka’s publisher, Embodied Philosophy…**
+
+For the entire month of June, you can enroll at **50% off the monthly Wisdom School membership** — just $23.50/month for an entire year with full access to our expansive library (well over 1000 hours) of on-demand courses, lectures, and live workshops on a diverse range of traditions, texts, and subtle practices. *[Enroll here](https://school.embodiedphilosophy.com/checkout/new?o=87213) and use code* **ANNIVERSARY50** at checkout.
+
+[Start your](https://enroll.embodiedphilosophy.com/wisdom-school) **[free trial](https://enroll.embodiedphilosophy.com/wisdom-school)** [to Embodied Philosophy’s Wisdom School to get access to the above and over 1000 hours of on-demand contemplative studies course content.](https://enroll.embodiedphilosophy.com/wisdom-school)
+
+[^1]: Epistemology is an area of philosophical inquiry that investigates the nature of knowledge. Questions like “What is knowledge?”, “Do we know anything at all?”, and “How do we know what we know?” are common questions for epistemology.
+
+[^2]: Given the ubiquitous use of the term “enlightenment” to translate concepts used by contemplative traditions to signify the goal of spiritual practice, it is somewhat ironic that this Western historical moment is called the “Enlightenment,” for it was characterized by an approach to knowledge that tacitly rejected those spiritual methodologies that would lead to contemplative insight, or “enlightenment.”
+
+[^3]: While much of Western intellectual history has largely ignored the evidence of contemplative practices in its tradition, others have emphasized the role of theurgy, spiritual practices and meditation in varying Western philosophical traditions. See Thomas McEvilley, *The Shape of Ancient Thought: Comparative Studies in Greek and Indian Philosophies*. New York: Allworth Press (2002). See Pierre Hadot, *Philosophy as a Way of Life*. Oxford: Blackwell (1995).
