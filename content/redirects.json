@@ -1,0 +1,7 @@
+[
+  { "source": "/read", "destination": "/issues" },
+  { "source": "/bookstore", "destination": "/editions" },
+  { "source": "/submissions", "destination": "/pitch" },
+  { "source": "/no-9-on-power", "destination": "/issues/9-on-power" },
+  { "source": "/no-9-on-power/:path*", "destination": "/issues/9-on-power" }
+]

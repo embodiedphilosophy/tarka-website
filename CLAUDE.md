@@ -1,0 +1,11 @@
+# Working on tarka-website with Claude
+
+- Next.js 16 App Router, TypeScript, plain CSS (no Tailwind). Route params are Promises: `const { slug } = await params`.
+- Design tokens and every component style live in `app/globals.css`. Reuse existing classes (`display-l`, `h-section`, `eyebrow`, `tag`, `btn btn--primary`, `grid-cards`, `two-col`, `feature-panel`…) before adding new ones.
+- Pages never read files directly — always go through `lib/content.ts`. When Sanity arrives, only that file changes.
+- Content: `content/*.ts` for issues/authors/topics/editions, `content/articles/*.md` for essays.
+- Colours: paper `#F6F3EC`, ink `#1B1A17`, indigo `#2E3F7F` (actions/links), madder `#9C3B22` (series, highlights), gold `#D9A441`. Type: Newsreader (serif), IBM Plex Sans (UI), IBM Plex Mono (labels), Noto Serif Devanagari.
+- Every page should end in a way to subscribe (print or newsletter). The header's Subscribe button goes to `/subscribe`; ads go to `/print` or `/newsletter`.
+- Don't invent content. Use `[bracketed placeholders]` for anything not supplied.
+- Images: upload to Vercel Blob and use the URL in `image` / `coverImage` fields. Tarka art is for covers.
+- Check `npm run build` passes before pushing.
