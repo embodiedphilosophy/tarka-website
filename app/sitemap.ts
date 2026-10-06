@@ -4,7 +4,7 @@ import { site } from "@/lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const u = (p: string) => `${site.url}${p}`;
-  const fixed = ["", "/issues", "/topics", "/podcast", "/editions", "/about", "/print", "/subscribe", "/newsletter", "/pitch", "/institute", "/support", "/archive"];
+  const fixed = ["", "/issues", "/topics", "/podcast", "/editions", "/about", "/print", "/subscribe", "/newsletter", "/pitch", "/institute", "/events", "/congress", "/consortium", "/editorial-board", "/support", "/archive"];
   return [
     ...fixed.map((p) => ({ url: u(p) })),
     ...getIssues().map((i) => ({ url: u(`/issues/${i.slug}`) })),

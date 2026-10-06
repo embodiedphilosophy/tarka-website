@@ -17,10 +17,14 @@ export const mainNav = [
   { href: "/topics", label: "Topics" },
   { href: "/podcast", label: "Podcast" },
   { href: "/editions", label: "Editions" },
+  { href: "/events", label: "Events" },
   { href: "/about", label: "About" },
 ];
 
 export const footerNav = [
+  { href: "/congress", label: "The Congress" },
+  { href: "/consortium", label: "Contemplative Consortium" },
+  { href: "/editorial-board", label: "Editorial Board" },
   { href: "/newsletter", label: "Newsletter" },
   { href: "/pitch", label: "Pitch us" },
   { href: "/institute", label: "Tarka Institute" },

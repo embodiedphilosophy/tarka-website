@@ -149,7 +149,14 @@ export function EditionCover({ art, title, image }: { art: ArtKey; title: string
       <rect x="14" y="14" width="172" height="272" fill="none" stroke={p.accent} strokeWidth="2" />
       <circle cx="100" cy="140" r="44" fill={p.accent} />
       <circle cx="100" cy="140" r="20" fill="#E9DFC9" />
-      <text x="100" y="244" textAnchor="middle" fontFamily="var(--font-newsreader), serif" fontStyle="italic" fontSize="19" fill="#1B1A17">{title}</text>
+      {title.length > 16 ? (
+        <>
+          <text x="100" y="232" textAnchor="middle" fontFamily="var(--font-newsreader), serif" fontStyle="italic" fontSize="18" fill="#1B1A17">{title.split(" ").slice(0, Math.ceil(title.split(" ").length / 2)).join(" ")}</text>
+          <text x="100" y="256" textAnchor="middle" fontFamily="var(--font-newsreader), serif" fontStyle="italic" fontSize="18" fill="#1B1A17">{title.split(" ").slice(Math.ceil(title.split(" ").length / 2)).join(" ")}</text>
+        </>
+      ) : (
+        <text x="100" y="244" textAnchor="middle" fontFamily="var(--font-newsreader), serif" fontStyle="italic" fontSize="19" fill="#1B1A17">{title}</text>
+      )}
     </svg>
   );
 }

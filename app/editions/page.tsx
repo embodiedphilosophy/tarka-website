@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { getEditions } from "@/lib/content";
 import { EditionCover } from "@/components/Art";
+import { editionsSeries } from "@/content/editions";
 
 export const metadata: Metadata = { title: "Tarka Editions" };
 
@@ -11,7 +12,10 @@ export default function EditionsPage() {
     <main className="container page">
       <section className="two-col">
         <h1 className="display-l">Tarka Editions</h1>
-        <p className="dek placeholder">[One line on the press: scholar-practitioner editions of key texts.]</p>
+        <div className="stack" style={{ gap: 14 }}>
+          <p className="dek">The press of Tarka Journal.</p>
+          <p className="body-l"><b>{editionsSeries.name}.</b> {editionsSeries.description}</p>
+        </div>
       </section>
       <section className="grid-covers" style={{ gridTemplateColumns: "repeat(auto-fill, minmax(220px, 1fr))" }}>
         {editions.map((e) => (

@@ -13,6 +13,7 @@ import { ArticleArt, EditionCover } from "@/components/Art";
 import { ArticleCard, ArticleListItem, kicker } from "@/components/Cards";
 import PrintBand from "@/components/PrintBand";
 import NewsletterForm from "@/components/NewsletterForm";
+import { congress } from "@/content/congress";
 
 export default function HomePage() {
   const lead = getLeadArticle();
@@ -28,6 +29,10 @@ export default function HomePage() {
 
   return (
     <main className="container page" style={{ paddingTop: 40 }}>
+      <Link href="/congress" className="section-head" style={{ background: "var(--indigo)", color: "var(--white)", padding: "16px 24px", borderRadius: "var(--radius)", alignItems: "center" }}>
+        <span><b>{congress.name}</b> · <i>{congress.theme}</i> · {congress.dates}, online</span>
+        <span style={{ fontWeight: 600 }}>See the programme →</span>
+      </Link>
       {lead && (
         <section className="lead">
           <div className="lead__main">

@@ -64,7 +64,8 @@ export default async function PrintPage({ searchParams }: { searchParams: Promis
         <section className="benefits">
           <div><b className="h-card">Every new issue</b><span className="body-l" style={{ fontSize: 16 }}>[N] issues a year, printed on demand and shipped to you.</span></div>
           <div><b className="h-card">Print-only pages</b><span className="body-l placeholder" style={{ fontSize: 16 }}>[What appears only in print.]</span></div>
-          <div><b className="h-card">Tarka Editions</b><span className="body-l placeholder" style={{ fontSize: 16 }}>[Subscriber offer on new Editions, if any.]</span></div>
+          <div><b className="h-card">Evenings and the Congress</b><span className="body-l" style={{ fontSize: 16 }}>Free entry to Tarka Evenings in Seattle, New York, London and Oxford, and a free Full Pass to the Annual Congress.</span></div>
+          <div><b className="h-card">Tarka Editions</b><span className="body-l" style={{ fontSize: 16 }}>A subscriber discount on every Scholar-Practitioner Edition.</span></div>
           <div><b className="h-card">Online stays free</b><span className="body-l" style={{ fontSize: 16 }}>Every essay remains free to read on the site. Print is how you support it.</span></div>
         </section>
 
