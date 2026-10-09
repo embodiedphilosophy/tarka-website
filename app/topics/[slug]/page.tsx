@@ -24,7 +24,7 @@ export default async function TopicPage({ params }: Props) {
       eyebrow="Topic"
       title={topic.name}
       description={topic.description ?? <span className="placeholder">[Two-line topic description.]</span>}
-      articles={getArticlesByTopic(topic.slug)}
+      articles={await getArticlesByTopic(topic.slug)}
     />
   );
 }

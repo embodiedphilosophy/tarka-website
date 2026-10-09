@@ -13,6 +13,7 @@ import { authors as authorData } from "@/content/authors";
 import { topics as topicData, series as seriesData } from "@/content/topics";
 import { editions as editionData } from "@/content/editions";
 import type { Article, ArticleMeta, ArtKey, Author, Edition, Issue, Series, Topic } from "./types";
+import { fetchDeskArticleList, toArticle } from "./desk";
 
 /**
  * The ONE place pages get content from.
@@ -78,23 +79,35 @@ async function renderMarkdown(md: string): Promise<string> {
 }
 
 /* ---------- Articles ---------- */
-export function getArticles(): ArticleMeta[] {
-  return allArticleFiles().map((a) => a.meta);
+// Markdown essays in /content/articles, plus articles published on Tarka Desk.
+// If both use the same slug, the Desk version wins, so an essay can move to the Desk without a redirect.
+export async function getArticles(): Promise<ArticleMeta[]> {
+  const files = allArticleFiles().map((a) => a.meta);
+  const desk = (await fetchDeskArticleList()).map((d) => {
+    const { html: _html, ...meta } = toArticle(d);
+    void _html;
+    return meta as ArticleMeta;
+  });
+  const deskSlugs = new Set(desk.map((a) => a.slug));
+  return [...desk, ...files.filter((a) => !deskSlugs.has(a.slug))].sort((a, b) => b.date.localeCompare(a.date));
 }
 
 export async function getArticle(slug: string): Promise<Article | null> {
+  // Uses the cached Desk list, so Markdown essays cost no extra request.
+  const desk = (await fetchDeskArticleList()).find((d) => d.slug === slug);
+  if (desk) return toArticle(desk);
   const found = allArticleFiles().find((a) => a.meta.slug === slug);
   if (!found) return null;
   return { ...found.meta, html: await renderMarkdown(found.body) };
 }
 
-export const getArticlesByIssue = (issue: string) => getArticles().filter((a) => a.issue === issue);
-export const getArticlesByTopic = (topic: string) => getArticles().filter((a) => a.topics.includes(topic));
-export const getArticlesBySeries = (s: string) => getArticles().filter((a) => a.series === s);
-export const getArticlesByAuthor = (author: string) => getArticles().filter((a) => a.authors.includes(author));
+export const getArticlesByIssue = async (issue: string) => (await getArticles()).filter((a) => a.issue === issue);
+export const getArticlesByTopic = async (topic: string) => (await getArticles()).filter((a) => a.topics.includes(topic));
+export const getArticlesBySeries = async (s: string) => (await getArticles()).filter((a) => a.series === s);
+export const getArticlesByAuthor = async (author: string) => (await getArticles()).filter((a) => a.authors.includes(author));
 
-export function getLeadArticle(): ArticleMeta | undefined {
-  const all = getArticles();
+export async function getLeadArticle(): Promise<ArticleMeta | undefined> {
+  const all = await getArticles();
   return all.find((a) => a.featured) ?? all[0];
 }
 

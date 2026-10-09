@@ -40,7 +40,7 @@ export default async function AuthorPage({ params }: Props) {
           <img src={author.photo} alt={author.name} style={{ width: 120, height: 120, borderRadius: "50%", objectFit: "cover" }} />
         ) : undefined
       }
-      articles={getArticlesByAuthor(author.slug)}
+      articles={await getArticlesByAuthor(author.slug)}
     />
   );
 }

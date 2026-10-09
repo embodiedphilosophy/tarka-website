@@ -20,6 +20,6 @@ export default async function SeriesPage({ params }: Props) {
   const series = getSeries(slug);
   if (!series) notFound();
   return (
-    <Listing eyebrow="Series" title={<i>{series.name}</i>} description={series.description} articles={getArticlesBySeries(series.slug)} />
+    <Listing eyebrow="Series" title={<i>{series.name}</i>} description={series.description} articles={await getArticlesBySeries(series.slug)} />
   );
 }
