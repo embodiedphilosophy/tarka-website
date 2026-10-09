@@ -15,12 +15,12 @@ import PrintBand from "@/components/PrintBand";
 import NewsletterForm from "@/components/NewsletterForm";
 import { congress } from "@/content/congress";
 
-export default function HomePage() {
-  const lead = getLeadArticle();
+export default async function HomePage() {
+  const lead = await getLeadArticle();
   const current = getCurrentIssue();
-  const inIssue = current ? getArticlesByIssue(current.slug).filter((a) => a.slug !== lead?.slug) : [];
+  const inIssue = current ? (await getArticlesByIssue(current.slug)).filter((a) => a.slug !== lead?.slug) : [];
   const shownSlugs = new Set([lead?.slug, ...inIssue.map((a) => a.slug)]);
-  const rest = getArticles().filter((a) => !shownSlugs.has(a.slug));
+  const rest = (await getArticles()).filter((a) => !shownSlugs.has(a.slug));
   const thisIssueCards = [...inIssue, ...rest].slice(0, 3);
   const archive = rest.filter((a) => !thisIssueCards.some((c) => c.slug === a.slug)).slice(0, 5);
   const leadIssue = lead?.issue ? getIssue(lead.issue) : null;

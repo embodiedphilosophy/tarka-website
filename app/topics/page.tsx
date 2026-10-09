@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { getArticlesByTopic, getSeriesList, getTopics } from "@/lib/content";
+import { getArticles, getSeriesList, getTopics } from "@/lib/content";
 
 export const metadata: Metadata = { title: "Topics" };
 
-export default function TopicsPage() {
+export default async function TopicsPage() {
+  const articles = await getArticles();
   return (
     <main className="container page">
       <div className="stack" style={{ gap: 16 }}>
@@ -13,7 +14,7 @@ export default function TopicsPage() {
       </div>
       <section style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(260px, 1fr))", gap: "0 40px" }}>
         {getTopics().map((t) => {
-          const n = getArticlesByTopic(t.slug).length;
+          const n = articles.filter((a) => a.topics.includes(t.slug)).length;
           return (
             <Link key={t.slug} href={`/topics/${t.slug}`} className="list-item">
               <span className="list-item__title" style={{ fontSize: 26 }}>{t.name}</span>

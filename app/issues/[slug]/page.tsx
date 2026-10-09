@@ -22,7 +22,7 @@ export default async function IssuePage({ params }: Props) {
   const { slug } = await params;
   const issue = getIssue(slug);
   if (!issue) notFound();
-  const articles = getArticlesByIssue(issue.slug);
+  const articles = await getArticlesByIssue(issue.slug);
   const all = getIssues();
   const idx = all.findIndex((i) => i.slug === issue.slug);
   const newer = idx > 0 ? all[idx - 1] : null;

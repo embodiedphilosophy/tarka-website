@@ -4,9 +4,9 @@ import { authorNames, getArticles } from "@/lib/content";
 
 export const metadata: Metadata = { title: "Archive" };
 
-export default function ArchivePage() {
-  const byYear = new Map<string, ReturnType<typeof getArticles>>();
-  for (const a of getArticles()) {
+export default async function ArchivePage() {
+  const byYear = new Map<string, Awaited<ReturnType<typeof getArticles>>>();
+  for (const a of await getArticles()) {
     const y = a.date.slice(0, 4) || "Undated";
     byYear.set(y, [...(byYear.get(y) ?? []), a]);
   }

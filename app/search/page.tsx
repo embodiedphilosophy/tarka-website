@@ -4,8 +4,8 @@ import SearchClient from "./SearchClient";
 
 export const metadata: Metadata = { title: "Search" };
 
-export default function SearchPage() {
-  const index = getArticles().map((a) => ({
+export default async function SearchPage() {
+  const index = (await getArticles()).map((a) => ({
     slug: a.slug,
     title: a.title,
     dek: a.dek ?? "",
