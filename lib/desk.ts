@@ -84,7 +84,7 @@ export function toArticle(d: DeskArticle): Article {
     slug: d.slug, title: d.title, dek: d.standfirst ?? d.description ?? undefined,
     authors, issue, topics, series,
     date: (d.publishedAt ?? new Date().toISOString()).slice(0, 10), art: "indigo",
-    readingMinutes: d.readingMinutes, featured: false,
+    readingMinutes: d.readingMinutes, featured: false, fromDesk: true,
     html: renderDeskHtml(d),
   };
 }

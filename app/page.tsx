@@ -19,9 +19,13 @@ export default async function HomePage() {
   const lead = await getLeadArticle();
   const current = getCurrentIssue();
   const inIssue = current ? (await getArticlesByIssue(current.slug)).filter((a) => a.slug !== lead?.slug) : [];
-  const shownSlugs = new Set([lead?.slug, ...inIssue.map((a) => a.slug)]);
-  const rest = (await getArticles()).filter((a) => !shownSlugs.has(a.slug));
-  const thisIssueCards = [...inIssue, ...rest].slice(0, 3);
+  // Web-only articles published from Tarka Desk (no issue) get their own section
+  // so they never show up under an issue heading they don't belong to.
+  const all = (await getArticles()).filter((a) => a.slug !== lead?.slug);
+  const onTheWeb = all.filter((a) => a.fromDesk && !a.issue).slice(0, 3);
+  const shownSlugs = new Set([lead?.slug, ...inIssue.map((a) => a.slug), ...onTheWeb.map((a) => a.slug)]);
+  const rest = all.filter((a) => !shownSlugs.has(a.slug));
+  const thisIssueCards = [...inIssue, ...rest.filter((a) => a.issue)].slice(0, 3);
   const archive = rest.filter((a) => !thisIssueCards.some((c) => c.slug === a.slug)).slice(0, 5);
   const leadIssue = lead?.issue ? getIssue(lead.issue) : null;
   const leadKicker = lead ? kicker(lead) : null;
@@ -54,6 +58,18 @@ export default async function HomePage() {
             <h2 id="archive-rail" className="eyebrow" style={{ color: "var(--ink)", padding: "14px 0" }}>From the archive</h2>
             {archive.map((a) => <ArticleListItem key={a.slug} article={a} />)}
           </aside>
+        </section>
+      )}
+
+      {onTheWeb.length > 0 && (
+        <section className="stack" style={{ gap: 28 }}>
+          <div className="section-head rule-top">
+            <h2 className="h-section">New on the web</h2>
+            <Link href="/archive" className="link-underline">All articles</Link>
+          </div>
+          <div className="grid-cards">
+            {onTheWeb.map((a) => <ArticleCard key={a.slug} article={a} />)}
+          </div>
         </section>
       )}
 
