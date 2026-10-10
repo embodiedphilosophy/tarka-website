@@ -74,6 +74,7 @@ export type ArticleMeta = {
   paywall?: boolean; // paid on Substack: the site shows a preview and links there
   featured?: boolean; // candidate for the homepage lead
   readingMinutes: number;
+  fromDesk?: boolean; // published on Tarka Desk
 };
 
 export type Article = ArticleMeta & { html: string };
